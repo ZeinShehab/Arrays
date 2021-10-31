@@ -34,16 +34,19 @@ def add_char(array: List[any], char: str, count: int=1, interval: int=1, rng: li
 
 
 def add_char_in_3D(array: List[List[any]], char: str, count: int=1, interval: List[int]=[1, 1], rng: List[List[int]]=[False, False]) -> List[any]:
-    out_rng = rng[0]
-    in_rng = rng[1]
+    out_rng = rng[1]
+    in_rng = rng[0]
 
-    out_interval = interval[0]
-    in_interval = interval[1]
+    out_interval = interval[1]
+    in_interval = interval[0]
 
-    if interval[0] == 0:
-        interval[0] == 1
-    if interval[1] == 0:
-        interval[1] == 1
+    if out_interval == 0:
+        out_interval = 1
+    if in_interval == 0:
+        in_interval = 1
+
+    if len(rng) == 1:
+        pass
 
     if not in_rng:
         in_rng = [False, False]
