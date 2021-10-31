@@ -2,6 +2,7 @@
 
 from typing import List
 
+
 def to_str(array: List[any], spacing: int=0) -> str:   
     space: str = " " * spacing
     return space.join(str(x) for x in array)
